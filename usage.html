@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TetherView — 利用手順</title>
+  <link rel="icon" href="assets/icon.png" type="image/png" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="topbar-only">
+    <nav class="topbar">
+      <a class="brand" href="./">
+        <img src="assets/icon.png" alt="TetherView" />
+        <span>TetherView</span>
+      </a>
+      <ul class="nav">
+        <li><a href="./">トップ</a></li>
+        <li><a href="usage.html" class="active">利用手順</a></li>
+        <li><a href="downloads.html">ダウンロード</a></li>
+        <li><a href="license.html">ライセンス</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container narrow">
+    <h1>利用手順</h1>
+    <p class="lead">
+      Windows PC と Android タブレットを USB ケーブルでつなぎ、ボタン 1 つで
+      タブレットを拡張ディスプレイとして利用できます。
+    </p>
+
+    <section class="step">
+      <h2><span class="num">0</span> 事前準備</h2>
+      <ol>
+        <li>Android タブレットで <strong>「USB デバッグ」</strong> を有効にする
+          （設定 → 開発者オプション → USB デバッグ）。</li>
+        <li>Android 側に <strong>TetherView アプリ</strong>をインストールする
+          （Google Play から）。</li>
+        <li>Windows 側に <a href="downloads.html">TetherView-1.0.0-x64.msi</a> をダウンロード・インストールする。
+          インストール時のみ管理者権限の確認が表示されます。</li>
+      </ol>
+    </section>
+
+    <section class="step">
+      <h2><span class="num">1</span> Windows アプリのメイン画面</h2>
+      <p>
+        Android タブレットを Windows PC に USB ケーブルで接続し、TetherView を起動します。
+        「接続」を押すと現在選択されている画面が投影されて、
+        「拡張ディスプレイとして追加」を押すと仮想ディスプレイが追加されて
+        マルチモニター化して利用できます。
+      </p>
+      <figure>
+        <img src="assets/screenshots/demo_app_main.png"
+             alt="TetherView Windows 版のメイン画面" />
+        <figcaption>Windows 版 TetherView のメイン画面。タイトルバー直下に接続状態、
+          下部に「接続」と「拡張ディスプレイとして追加」ボタンが表示されます。</figcaption>
+      </figure>
+    </section>
+
+    <section class="step">
+      <h2><span class="num">2</span>「接続」で現在のモニターを投影</h2>
+      <p>
+        「接続」を押すと、現在選択されているモニターの画面が Android タブレットへ投影されます
+        （ミラーリング）。
+      </p>
+      <figure>
+        <img src="assets/screenshots/demo_display_settings.png"
+             alt="接続中の画面イメージ" />
+        <figcaption>「接続」を押すと現在選択されている画面を投影したイメージ。</figcaption>
+      </figure>
+    </section>
+
+    <section class="step">
+      <h2><span class="num">3</span>「拡張ディスプレイとして追加」でマルチモニター化</h2>
+      <p>
+        「拡張ディスプレイとして追加」を押すと、仮想ディスプレイが追加されて
+        マルチモニター化して利用できます。Android アプリの起動状態を確認した後、
+        内蔵の仮想ディスプレイドライバーを自動でセットアップし、Windows の
+        拡張モニターとして登録します。
+      </p>
+      <figure>
+        <img src="assets/screenshots/demo_browser_extended.png"
+             alt="拡張ディスプレイとして追加の動作" />
+        <figcaption>「拡張ディスプレイとして追加」を押すと仮想ディスプレイが追加されて
+          マルチモニター化して利用できます。操作は PC 側のマウス・キーボードで行います。</figcaption>
+      </figure>
+    </section>
+
+    <section class="step">
+      <h2><span class="num">4</span> 切断・終了</h2>
+      <p>
+        Windows アプリ下部の <strong>「切断」</strong> ボタンを押すか、ウィンドウを閉じると
+        自動的に仮想ディスプレイがクリーンアップされます。USB ケーブルを抜く前に
+        切断操作することをおすすめします。
+      </p>
+    </section>
+
+    <hr />
+
+    <h2>トラブルシューティング</h2>
+    <dl class="faq">
+      <dt>Android タブレットが検出されない</dt>
+      <dd>USB ケーブルがデータ通信対応であること、USB デバッグが ON であること、
+          初回接続時はタブレット側で「このコンピュータを許可しますか?」ダイアログを許可していることを確認してください。</dd>
+
+      <dt>「拡張ディスプレイとして追加」を押しても画面が真っ黒</dt>
+      <dd>仮想ディスプレイの初期化に最大 20 秒程度かかる場合があります。表示が変わらない場合は、
+          いったん切断 → 再度「拡張ディスプレイとして追加」をお試しください。</dd>
+
+      <dt>ディスプレイの位置を変更後、表示が乱れた</dt>
+      <dd>切断後に再度「拡張ディスプレイとして追加」を実行することで、現行のディスプレイ配置に
+          合わせてキャプチャ・ストリームが再初期化されます。</dd>
+
+      <dt>アンインストール時に管理者権限が要求される</dt>
+      <dd>仮想ディスプレイドライバー登録の Scheduled Task と関連ファイルの削除のため必須です。</dd>
+    </dl>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>
+        © 2026 TetherView ・
+        <a href="license.html">ライセンス</a> ・
+        <a href="./">トップ</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

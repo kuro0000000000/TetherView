@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TetherView — ダウンロード</title>
+  <link rel="icon" href="assets/icon.png" type="image/png" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="topbar-only">
+    <nav class="topbar">
+      <a class="brand" href="./">
+        <img src="assets/icon.png" alt="TetherView" />
+        <span>TetherView</span>
+      </a>
+      <ul class="nav">
+        <li><a href="./">トップ</a></li>
+        <li><a href="usage.html">利用手順</a></li>
+        <li><a href="downloads.html" class="active">ダウンロード</a></li>
+        <li><a href="license.html">ライセンス</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container narrow">
+    <h1>ダウンロード</h1>
+
+    <div class="download-card">
+      <h2>Windows 版（無料）</h2>
+      <p>送信側 PC 用。仮想ディスプレイドライバー・ADB・必要ランタイムをすべて同梱。</p>
+      <a class="btn btn-primary" href="downloads/TetherView-1.0.0-x64.msi" download>
+        TetherView-1.0.0-x64.msi をダウンロード
+      </a>
+      <ul class="meta">
+        <li>バージョン: 1.0.0</li>
+        <li>対応: Windows 10 1809 / Windows 11 (x64)</li>
+        <li>サイズ: 約 44 MB</li>
+      </ul>
+      <p class="subnote">
+        インストールには管理者権限が必要です（インストール時のみ）。
+        インストール後のアプリ使用中は UAC は表示されません。
+      </p>
+    </div>
+
+    <div class="download-card">
+      <h2>Android 版（買い切り課金 / 初回 3 回無料）</h2>
+      <p>
+        Android タブレット用クライアント。Google Play からダウンロードできます。
+        初回起動から <strong>3 回までは無料で全機能</strong>をご利用いただけます。
+        4 回目以降の利用には買い切り課金が必要です。
+      </p>
+      <a class="btn btn-primary" href="#" onclick="alert('Google Play 公開準備中です。')">
+        Google Play で入手
+      </a>
+      <ul class="meta">
+        <li>バージョン: 1.0.0</li>
+        <li>対応: Android 8.0 以降</li>
+        <li>パッケージ ID: com.tetherview</li>
+      </ul>
+    </div>
+
+    <div class="download-card">
+      <h2>ソースコード</h2>
+      <p>本プロジェクトは個人利用向けに公開しています。</p>
+      <a class="btn btn-ghost" href="https://github.com/your-org/TetherView" target="_blank" rel="noopener">
+        GitHub リポジトリ
+      </a>
+    </div>
+
+    <h2>インストール後の確認事項</h2>
+    <ul>
+      <li>初回起動前に Android タブレットを USB 接続し、USB デバッグを ON にしてください。</li>
+      <li>「拡張ディスプレイとして追加」ボタンを押すと、Android アプリの存在確認を行います
+          （ADB 経由）。インストール済みかつ起動済みでない場合は適切なエラーメッセージが表示されます。</li>
+      <li>仮想ディスプレイは切断またはアプリ終了時に自動削除されます。
+          手動でデバイスマネージャから削除する必要はありません。</li>
+    </ul>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 TetherView ・ <a href="license.html">ライセンス</a> ・ <a href="./">トップ</a></p>
+    </div>
+  </footer>
+</body>
+</html>

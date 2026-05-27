@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TetherView — Android タブレットを PC の拡張ディスプレイに</title>
+  <meta name="description" content="USB ケーブル 1 本で Android タブレットを Windows PC の拡張モニターとして利用。仮想ディスプレイドライバー同梱で追加の HDMI 機器不要。" />
+  <link rel="icon" href="assets/icon.png" type="image/png" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="topbar">
+      <a class="brand" href="./">
+        <img src="assets/icon.png" alt="TetherView" />
+        <span>TetherView</span>
+      </a>
+      <ul class="nav">
+        <li><a href="#features">特長</a></li>
+        <li><a href="usage.html">利用手順</a></li>
+        <li><a href="downloads.html">ダウンロード</a></li>
+        <li><a href="license.html">ライセンス</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-inner">
+      <img class="hero-icon" src="assets/icon.png" alt="" />
+      <h1>Android タブレットを<br>Windows PC の<strong>拡張ディスプレイ</strong>に</h1>
+      <p class="lead">
+        USB ケーブル 1 本で接続。仮想ディスプレイドライバー同梱、ケーブル以外の機器追加不要。
+        ノートパソコン + タブレットの組み合わせで、出先でもマルチディスプレイ作業環境を実現します。
+      </p>
+      <div class="cta">
+        <a class="btn btn-primary" href="downloads.html">
+          Windows 版を無料ダウンロード
+        </a>
+        <a class="btn btn-ghost" href="usage.html">利用手順を見る →</a>
+      </div>
+      <p class="subnote">
+        Windows 10 / 11 (x64) ・ Android 8.0 以降
+      </p>
+    </div>
+  </header>
+
+  <section id="features" class="section">
+    <div class="container">
+      <h2>特長</h2>
+      <div class="features">
+        <div class="feature">
+          <div class="icon-circle">🔌</div>
+          <h3>USB のみで完結</h3>
+          <p>
+            ADB 経由で映像とタッチイベントを伝送。Wi-Fi 接続や HDMI キャプチャ機器、
+            外付けディスプレイは不要です。
+          </p>
+        </div>
+        <div class="feature">
+          <div class="icon-circle">🖥️</div>
+          <h3>本物の拡張ディスプレイ</h3>
+          <p>
+            仮想ディスプレイドライバー (MttVDD) を同梱。Windows からは
+            通常のセカンドモニターとして認識され、ウィンドウのドラッグ移動で
+            タブレットへ自然に拡張できます。
+          </p>
+        </div>
+        <div class="feature">
+          <div class="icon-circle">⚡</div>
+          <h3>低遅延 H.264</h3>
+          <p>
+            ハードウェアエンコーダー (Media Foundation) で 60fps を実現。
+            DXGI Desktop Duplication でフレームを直接 GPU から取得します。
+          </p>
+        </div>
+        <div class="feature">
+          <div class="icon-circle">🔐</div>
+          <h3>UAC ダイアログなし</h3>
+          <p>
+            インストール時に SYSTEM 権限の Scheduled Task を登録するため、
+            アプリ使用中はユーザーアカウント制御の確認が一切表示されません。
+          </p>
+        </div>
+        <div class="feature">
+          <div class="icon-circle">🎁</div>
+          <h3>Windows 版は無料</h3>
+          <p>
+            Windows 用クライアントは完全無料で利用可能。Android 側は購入前に
+            <strong>3 回まで無料</strong>でお試しいただけます。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2>動作イメージ</h2>
+      <p class="subnote center">
+        ノートパソコン本体のディスプレイ (#1) と、USB 接続した Android タブレット (#2)
+        が拡張デスクトップとして連携します。
+      </p>
+      <div class="screens">
+        <figure>
+          <img src="assets/screenshots/demo_app_main.png" alt="TetherView Windows 版のメイン画面" />
+          <figcaption>
+            ① Windows アプリのメイン画面。「接続」を押すと現在選択されている画面が投影されて
+            「拡張ディスプレイとして追加」を押すと仮想ディスプレイが追加されてマルチモニター化して利用できます。
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="assets/screenshots/demo_display_settings.png" alt="接続中の画面イメージ" />
+          <figcaption>
+            ②「接続」を押すと現在選択されている画面を投影したイメージ。
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="assets/screenshots/demo_browser_extended.png" alt="拡張ディスプレイとして追加の動作" />
+          <figcaption>
+            ③「拡張ディスプレイとして追加」を押すと仮想ディスプレイが追加されてマルチモニター化して利用できます。
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>動作環境</h2>
+      <div class="reqs">
+        <div class="req">
+          <h3>Windows (送信側)</h3>
+          <ul>
+            <li>Windows 10 1809 / Windows 11 (x64)</li>
+            <li>.NET 8 Desktop Runtime（インストーラーに同梱）</li>
+            <li>Windows App Runtime 2.1（同梱）</li>
+            <li>USB ポート (Type-A もしくは Type-C)</li>
+          </ul>
+        </div>
+        <div class="req">
+          <h3>Android (受信側)</h3>
+          <ul>
+            <li>Android 8.0 (API 26) 以降</li>
+            <li>USB デバッグ ON</li>
+            <li>初回 3 回まで無料 / 以降は買い切り</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>
+        © 2026 TetherView ・
+        <a href="license.html">ライセンス</a> ・
+        <a href="usage.html">利用手順</a> ・
+        <a href="downloads.html">ダウンロード</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
